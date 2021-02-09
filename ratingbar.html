@@ -1,0 +1,91 @@
+<html>
+<head>
+<meta charset = "UTF-8">  
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">  
+    <!-- Bootstrap and jQuery CDN -->  
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">  
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"> </script>  
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"> </script>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+    <title> jQuery simple star rating example </title>  
+    <style>  
+    body {  
+        background-color: aquamarine;  
+        margin : 0px;  
+    }  
+    .fa-star {  
+        font-size : 50px;  
+        align-content : center;  
+    }  
+    .container {  
+        height : 100px;  
+        width : 600px;  
+        margin : auto;  
+    }  
+    </style>  
+</head>  
+<body>
+		<form method="post" action="review.php ">
+	   <div class = "container">  
+        <h2 style = "margin-top: 50px;"> jQuery star rating with hover </h2>  
+       <div class = "con">  
+        <h3 style = "margin-top : 80px; color: green;">Please provide rating on our product :-</h3>  
+        <!-- fa fa-star is used to create star icon -->  
+        <i class = "fa fa-star" aria-hidden = "true" id = "st1" name="star1"></i>  
+       <i class = "fa fa-star" aria-hidden = "true" id = "st2"  name="star2"></i>  
+       <i class = "fa fa-star" aria-hidden = "true" id = "st3"  name="star3"></i>  
+       <i class = "fa fa-star" aria-hidden = "true" id = "st4"  name="star4"></i>  
+       <i class = "fa fa-star" aria-hidden = "true" id = "st5"	name="star5"></i>  
+       <span id="reviewbox" name="reviewbox" style="border:2px solid black;"><textarea rows="5"></textarea></span><br>
+       <span><input type="submit" id="submitbtn" value="Submit"></span>
+       <span><input type="reset" id="clearbtn" value="clear"></span>
+
+       </div>  
+    </div>  
+    <!-- jQuery star rating with hover script -->  
+    <script>  
+        $(document).ready(function() { 
+        $('#review').hide(); 
+
+          $("#st1").click(function() {  
+              $(".fa-star").css("color", "black");  
+              $("#st1").css("color", "yellow");
+               $('#review').show(); 
+  
+          });  
+          $("#st2").click(function() {  
+              $(".fa-star").css("color", "black");  
+              $("#st1, #st2").css("color", "yellow"); 
+              $('#review').show(); 
+   
+  
+          });  
+          $("#st3").click(function() {  
+              $(".fa-star").css("color", "black")  
+              $("#st1, #st2, #st3").css("color", "yellow"); 
+              $('#review').show(); 
+   
+  
+          });  
+          $("#st4").click(function() {  
+              $(".fa-star").css("color", "black");  
+              $("#st1, #st2, #st3, #st4").css("color", "yellow"); 
+              $('#review').show(); 
+   
+  
+          });  
+          $("#st5").click(function() {  
+              $(".fa-star").css("color", "black");  
+              $("#st1, #st2, #st3, #st4, #st5").css("color", "yellow");  
+              $('#review').show(); 
+  
+  
+          }); 
+          
+        });
+ 
+    </script>  
+</form>
+</body>
+</html>
